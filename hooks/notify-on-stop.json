@@ -1,0 +1,37 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "scripts/notify-done.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "env GROK_NOTIFY_SOUND=Basso scripts/notify-done.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "env GROK_NOTIFY_SOUND=Hero scripts/notify-done.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
